@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile PitStop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Mobile PitStop</div>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#how-it-works">Cara Kerja</a></li>
+          <li><a href="#testimonials">Testimoni</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <button class="download-btn" type="button" aria-label="Download Mobile PitStop">Download Now</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" tabindex="-1">
+      <div class="container">
+        <h1>Perawatan Kendaraan Anda, Kini Lebih Mudah!</h1>
+        <p>Pesan layanan mekanik kapan pun dan di mana pun, tanpa harus ke bengkel.</p>
+        <div class="hero-buttons">
+          <button class="cta-btn" type="button">Pesan Sekarang</button>
+          <button class="cta-btn outline" type="button">Pelajari Lebih Lanjut</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Fitur Utama</h2>
+        <article class="feature" tabindex="0" aria-label="Layanan On-Demand">
+          <h3>Layanan On-Demand</h3>
+          <p>Mekanik datang ke lokasi Anda.</p>
+        </article>
+        <article class="feature" tabindex="0" aria-label="Perawatan Berkala">
+          <h3>Perawatan Berkala</h3>
+          <p>Jadwalkan perawatan rutin kendaraan Anda.</p>
+        </article>
+        <article class="feature" tabindex="0" aria-label="Perbaikan Darurat">
+          <h3>Perbaikan Darurat</h3>
+          <p>Layanan cepat untuk masalah mendesak.</p>
+        </article>
+        <article class="feature" tabindex="0" aria-label="Pembayaran Mudah">
+          <h3>Pembayaran Mudah</h3>
+          <p>Berbagai metode pembayaran yang aman.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <h2>Cara Kerja</h2>
+        <ol>
+          <li>Unduh aplikasi.</li>
+          <li>Pilih layanan yang Anda butuhkan.</li>
+          <li>Tentukan lokasi dan waktu.</li>
+          <li>Nikmati layanan di tempat Anda!</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2>Testimoni Pengguna</h2>
+        <blockquote>
+          “Layanan yang sangat memuaskan! Sangat direkomendasikan!” – Pengguna A
+        </blockquote>
+        <blockquote>
+          “Mobile PitStop membuat hidup saya lebih mudah!” – Pengguna B
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>Kontak: info@mobilepitstop.com | 123-456-7890</p>
+      <nav class="social-media" role="navigation" aria-label="Social media links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </nav>
+      <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat Layanan</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      navList.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
